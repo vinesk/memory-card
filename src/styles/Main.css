@@ -3,5 +3,5 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   padding: var(--space-xl);
-  gap: var(--space-lg);
+  gap: var(--space-md);
 }

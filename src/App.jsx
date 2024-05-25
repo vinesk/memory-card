@@ -41,7 +41,10 @@ const App = () => {
 
   useEffect(() => {
     const fetchPokemons = async () => {
-      const response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=12')
+      const limit = 18
+      const response = await fetch(
+        `https://pokeapi.co/api/v2/pokemon?limit=${limit}`
+      )
       const data = await response.json()
       const promises = data.results.map((result) =>
         fetch(result.url).then((res) => res.json())
